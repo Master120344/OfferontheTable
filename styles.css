@@ -186,6 +186,61 @@ nav ul li a.btn:hover {
     line-height: 1.8;
 }
 
+#login {
+    padding: 4rem 0;
+    background: #fff;
+    text-align: center;
+}
+
+#login h2 {
+    margin-bottom: 2rem;
+    color: #6b0f1a;
+}
+
+#login .form-group {
+    margin-bottom: 1.5rem;
+}
+
+#login label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+#login input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#login button.btn {
+    background: #ff7f50;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+#login button.btn:hover {
+    background: #e56d40;
+}
+
+#login p {
+    margin-top: 1rem;
+}
+
+#login p a {
+    color: #6b0f1a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#login p a:hover {
+    text-decoration: underline;
+}
+
 footer {
     background: linear-gradient(45deg, #6b0f1a, #b91372);
     color: #fff;
@@ -228,20 +283,4 @@ footer form button.btn:hover {
 
 .social a:hover {
     color: #ff7f50;
-}
-
-.social a.facebook:hover {
-    color: #3b5998; /* Facebook blue */
-}
-
-.social a.twitter:hover {
-    color: #00acee; /* Twitter blue */
-}
-
-.social a.instagram:hover {
-    color: #e4405f; /* Instagram gradient pink */
-}
-
-.social a.linkedin:hover {
-    color: #0077b5; /* LinkedIn blue */
 }
