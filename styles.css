@@ -62,183 +62,58 @@ nav ul li a.btn:hover {
     background: #e56d40;
 }
 
-#hero {
-    background: url('hero-bg.jpg') no-repeat center center/cover;
-    color: #fff;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    z-index: 1;
-}
-
-#hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-}
-
-#hero h2 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-#hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-#hero a.hero-btn {
-    background: #ff7f50;
-    color: #fff;
-    padding: 1rem 2rem;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    text-decoration: none;
-    transition: background 0.3s;
-}
-
-#hero a.hero-btn:hover {
-    background: #e56d40;
-}
-
-#features {
+#welcome {
     padding: 4rem 0;
-    background: #fff;
+    text-align: center;
 }
 
-#features h2 {
-    text-align: center;
+#welcome h2 {
     margin-bottom: 2rem;
     color: #6b0f1a;
 }
 
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+.welcome-grid {
+    display: flex;
+    justify-content: center;
     gap: 2rem;
 }
 
-.feature {
-    text-align: center;
-    background: #f4f4f4;
-    padding: 1.5rem;
+.welcome-option {
+    background: #fff;
+    padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.feature:hover {
-    transform: translateY(-10px);
-}
-
-.feature i {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #ff7f50;
-}
-
-#how-it-works {
-    padding: 4rem 0;
-    background: #f4f4f4;
-}
-
-#how-it-works h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #6b0f1a;
-}
-
-#how-it-works ol {
-    list-style: decimal;
-    padding-left: 2rem;
-    max-width: 700px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#about-us {
-    padding: 4rem 0;
-    background: #fff;
-    text-align: center;
-}
-
-#about-us h2 {
-    margin-bottom: 1rem;
-    color: #6b0f1a;
-}
-
-#about-us p {
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.8;
-}
-
-#login {
-    padding: 4rem 0;
-    background: #fff;
-    text-align: center;
-}
-
-#login h2 {
-    margin-bottom: 2rem;
-    color: #6b0f1a;
-}
-
-#login .form-group {
-    margin-bottom: 1.5rem;
-}
-
-#login label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-}
-
-#login input {
+    transition: transform 0.3s, box-shadow 0.3s;
     width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    max-width: 450px;
 }
 
-#login button.btn {
+.welcome-option:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-option h3 {
+    margin-bottom: 1rem;
+    color: #6b0f1a;
+}
+
+.welcome-option p {
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.welcome-option .btn {
     background: #ff7f50;
     color: #fff;
     padding: 0.5rem 1rem;
     border-radius: 5px;
-    font-size: 1rem;
+    text-decoration: none;
     transition: background 0.3s;
 }
 
-#login button.btn:hover {
+.welcome-option .btn:hover {
     background: #e56d40;
-}
-
-#login p {
-    margin-top: 1rem;
-}
-
-#login p a {
-    color: #6b0f1a;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-#login p a:hover {
-    text-decoration: underline;
 }
 
 footer {
