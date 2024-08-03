@@ -1,103 +1,340 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OfferontheTable - Find Local Jobs Easily</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="script.js" defer></script>
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1><a href="#">OfferontheTable</a></h1>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#how-it-works">How It Works</a></li>
-                    <li><a href="escrow.html">Escrow</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="#" class="btn">Sign Up</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    
-    <section id="hero">
-        <div class="container">
-            <h2>Find Local Jobs Easily</h2>
-            <p>Connecting skilled workers with local jobs. Fast, reliable, and scam-free.</p>
-            <a href="#" class="btn hero-btn">Get Started</a>
-        </div>
-    </section>
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
 
-    <section id="features" class="container">
-        <h2>Features</h2>
-        <div class="features-grid">
-            <div class="feature">
-                <i class="fas fa-search-location"></i>
-                <h3>Zip Code Based Search</h3>
-                <p>Find jobs near you quickly and easily with our zip code based search feature.</p>
-            </div>
-            <div class="feature">
-                <i class="fas fa-user-check"></i>
-                <h3>Skill Matching</h3>
-                <p>Match your skills with the right job opportunities effortlessly.</p>
-            </div>
-            <div class="feature">
-                <i class="fas fa-lock"></i>
-                <h3>Secure Payments</h3>
-                <p>Guaranteed payments through our secure escrow system.</p>
-            </div>
-            <div class="feature">
-                <i class="fas fa-star"></i>
-                <h3>Reliability Scores</h3>
-                <p>Build your reputation with our transparent rating system.</p>
-            </div>
-        </div>
-    </section>
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
 
-    <section id="how-it-works" class="container">
-        <h2>How It Works</h2>
-        <ol>
-            <li>Sign up and create your profile.</li>
-            <li>Add your skills and years of experience.</li>
-            <li>Search for jobs in your area using your zip code.</li>
-            <li>Apply for jobs and communicate with employers through the app.</li>
-            <li>Complete the job and get paid instantly through our escrow system.</li>
-        </ol>
-    </section>
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
 
-    <section id="about-us" class="container">
-        <h2>About Us</h2>
-        <p>OfferontheTable is dedicated to connecting skilled workers with local job opportunities. Our platform is designed to be fast, reliable, and scam-free, ensuring a positive experience for both job seekers and employers.</p>
-    </section>
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    display: inline-block;
+    color: #ff6f61;
+}
 
-    <footer>
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>Have questions or need support? Reach out to us!</p>
-            <form action="#">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-            <div class="social">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+header nav {
+    display: inline-block;
+    float: right;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ff6f61;
+}
+
+header nav ul li a.btn {
+    background-color: #ff6f61;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header nav ul li a.btn:hover {
+    background-color: #ff3d2e;
+}
+
+.menu-toggle {
+    display: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+#hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s;
+}
+
+#hero p {
+    font-size: 24px;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s;
+}
+
+#hero .btn {
+    background-color: #ff6f61;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    animation: pulse 2s infinite;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+#features, #how-it-works, #about-us {
+    padding: 50px 0;
+}
+
+#features h2, #how-it-works h2, #about-us h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 36px;
+    border-bottom: 2px solid #ff6f61;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature {
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+    margin: 15px;
+    background-color: #fff;
+    border: 2px solid #ff6f61;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.feature i {
+    font-size: 48px;
+    color: #ff6f61;
+    margin-bottom: 10px;
+}
+
+#how-it-works ol {
+    padding-left: 20px;
+    font-size: 18px;
+}
+
+#about-us p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+footer form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer form input, footer form textarea {
+    width: 80%;
+    max-width: 500px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+footer form button {
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+footer form button:hover {
+    background-color: #ff3d2e;
+}
+
+footer .social {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+footer .social a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+footer .social a:hover {
+    color: #ff6f61;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    header nav {
+        display: none; /* Hide the default navigation */
+    }
+
+    header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header .menu-toggle {
+        display: block;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        display: none; /* Hide the menu */
+    }
+
+    header nav ul.showing {
+        display: block;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    #hero h2 {
+        font-size: 36px;
+    }
+
+    #hero p {
+        font-size: 18px;
+    }
+
+    .features-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 18px;
+    }
+
+    #hero h2 {
+        font-size: 28px;
+    }
+
+    #hero p {
+        font-size: 16px;
+    }
+
+    #hero .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .feature i {
+        font-size: 36px;
+    }
+}
+
+/* Toggle Menu Styles */
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul.showing {
+        display: block;
+    }
+}
