@@ -19,12 +19,14 @@ header {
     color: #fff;
     padding: 20px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
 }
 
 header h1 {
     margin: 0;
     font-size: 28px;
     display: inline-block;
+    color: #ff6f61;
 }
 
 header nav {
@@ -63,6 +65,16 @@ header nav ul li a.btn {
 
 header nav ul li a.btn:hover {
     background-color: #ff3d2e;
+}
+
+.menu-toggle {
+    display: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
 #hero {
@@ -151,17 +163,4 @@ header nav ul li a.btn:hover {
     min-width: 250px;
     margin: 15px;
     background-color: #fff;
-    border: 2px solid #ff6f61;
-    border-radius: 10px;
-    padding: 20px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.feature:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.feature i {
-    font-size: 48px;
-    color: #ff
+    border: 2px solid #
